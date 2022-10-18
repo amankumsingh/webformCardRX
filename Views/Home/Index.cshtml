@@ -1,0 +1,208 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@{
+    Layout = "_Layout";
+}
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form>
+    <div class="container">
+        <h2 style="text-align: center; color: slateblue;">We respect your privacy</h2>
+        <div>
+            <h6 style="text-align: center; color: slateblue;">We never sell your information. Period.</h6><br />
+            <p style="border-style: outset;"></p>
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h6 style="color:slateblue;">Patient First<strong style="color:red">*</strong></h6>
+                <input class="form-control" style="text-align:center;" type="text" placeholder="First Name" id="txtFirstName" />
+                <br />
+                <h6 style="color: slateblue;">Date Of Birth<strong style="color:red">*</strong></h6>
+                <input class="input-group-append" type="date" id="txtDOB" /><br />
+                <br />
+
+                <h6 style="color: slateblue;">Patient Phone</h6>
+                <input class="form-control" style="text-align:center;" type="text" placeholder="10-Digits" id="txtPhone" />
+                <span>A copy of the card will be sent here</span>
+                <br />
+                <br />
+               
+
+            </div>
+
+            <div class="col-sm-2">
+
+            </div>
+
+            <div class="col-sm-4">
+                <div>
+                    <h6 style="color: slateblue;">Patient Last<strong style="color:red">*</strong></h6>
+                    <input class="form-control" style="text-align:center;" type="text" placeholder="Last Name" id="txtLastName" />
+                    <br />
+
+                    <h6 style="color:slateblue;">Sex<strong style="color:red">*</strong></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="rad1" name="fav_language" value="Male">
+                        <h6 class="form-check-label" for="rad1" style="color:slateblue;">Male</h6>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="rad2" name="fav_language" value="Female">
+                        <h6 class="form-check-label" for="rad2" style="color:slateblue;">Female</h6>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="rad3" name="fav_language" value="Unspecified">
+                        <h6 class="form-check-label" for="rad3" style="color:slateblue;">Unspecified</h6>
+
+                    </div>
+                    <br />
+                    <h6 style="color: slateblue;">Patient Email</h6>
+                    <input class="form-control" style="text-align:center;" type="text" placeholder="" id="txtEmail" />
+                    <span>A copy of the card will be sent here</span>
+                    <br />
+                </div>
+            </div>
+
+
+        </div>
+        <br />
+        <p style="border-style: outset;"></p>
+        <br />
+        <h2 style="text-align: center; color: slateblue;">Attorney Information</h2>
+        <div>
+            <br />
+            <p style="border-style: outset;"></p>
+            <br />
+        </div>
+        <div class="row">
+
+            <div class="col-sm-4">
+                <h6 style="color:slateblue;">Attorney Name<strong style="color:red">*</strong></h6>
+                <input class="form-control" style="text-align:center;" type="text" placeholder="First Name" id="txtAttorneyName" />
+                <br />
+                <h6 style="color: slateblue;">Attorney Phone<strong style="color:red">*</strong></h6>
+                <input class="form-control" style="text-align:center;" type="text" placeholder="" id="txtPhone" />
+                <br />
+
+                <div class="dropdown">
+
+                    <h6 style="color:slateblue;">Case type<strong style="color:red">*</strong></h6>
+                    <select class="custom-select" name="QtyOfCodes" id="QtyOfCodes" style="width:200px;">
+                        <option value="Select">Select</option>
+                        <option value="Auto">Auto</option>
+                        <option value="Premises">Premises</option>
+                        <option value="Dog Bite">Dog Bite</option>
+                        <option value="Product">Product</option>
+                        <option value="Malpractice">Malpractice</option>
+                        <option value="Workers Compensation">Workers Compensation</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-4">
+                <h6 style="color: slateblue;">Attorney Email</h6>
+                <input class="form-control" style="text-align:center;" type="text" placeholder="" id="txtEmail" />
+                <span>Lien and User Agreement will be sent here</span>
+
+                <h6 style="color: slateblue;">Date Of Accident<strong style="color:red">*</strong></h6>
+                <input class="input-group-append form-control" type="date" id="txtDOA" /><br />
+                <br />
+
+                <h6 style="color: slateblue;">Comments</h6>
+                <textarea class="input-group-append form-control" id="txtComments" rows="4" cols="50"></textarea><br />
+                <a>For special instructions, notes, or comments.</a>
+                <br />
+            </div>
+
+        </div>
+
+        <br />
+        <p style="border-style: outset;"></p>
+        <br />
+        <h2 style="text-align: center; color: slateblue;">Notice of Pharmacy Lien</h2>
+        <div>
+            <h6 style="text-align: center; color: slateblue;">Universal Letter of Protection.</h6><br />
+            <br />
+            <p style="border-style: outset;"></p>
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h6>RE: Pharmacy Charges</h6>
+                <span>
+                    Please be advised that our firm represents personal injury clients that are prescribed medication. This letter shall serve as notice that we will protect your Pharmacy Bill for medication prescribed to my client and is related to their legal claim. We expect prompt and accurate bills to be provided so that we may use them as damages for their legal claims.<br />
+
+                    Upon settlement and distribution of proceeds from the legal claim relating to Buena Vista Medical Services’ (hereafter “BVRX”) bill, I will contact BVRX to satisfy the lien. If I no longer represent the client/ patient than I will provide any and all applicable insurance carrier and/or subsequent attorney information to BVRX representative without delay. This Letter of Protection will cover all my clients that are issued medication by BVRX and last until I revoke it either verbally or in writing.
+                    <br />
+                </span>
+
+                <div style="text-align:center;">
+                    <br />
+                    <h6>Acknowledgement of Patient</h6>
+                    <br />
+                    <br />
+                </div>
+                <span>
+                    Patient acknowledges and assigns this medical lien to BVRX. Patient acknowledges and agrees that the said medical lien relates to prescriptions filled using the BVRX Prescription Drug Program
+                    <br />
+                    <br />
+                    WHEREAS, Patient has a requirement for prescription drugs that are related to an underlying personal injury claim and wishes to use the Program to obtain legally prescribed drugs relating to their legal claim. Further, Patient agrees to follow the Terms of Service outlined at www.buenavistarx.com/terms
+                    <br />
+                    <br />
+                    WHEREAS, Patient acknowledges and understands that BVRX shall have all rights to collection and enforcement of the Account, and that the Account may only be discharged by payment directly to BVRX. Patient understands that the only method by which this medical lien shall be discharged is through payment of the Billable Cost directly to BVRX.
+                    <br />
+                    NOW THEREFORE, Patient agrees that, through this Agreement, BVRX will maintain a lien against Patient for the Billed Amount of the prescriptions filled using the Program. Patient acknowledges the rates charged for such drugs may be more or less than the amount customarily charged to other patients, depending on matters such as insurance plans and government programs.
+                    <br />
+                    <br />
+                    Patient has represented to BVRX that Patient’s injuries and need for prescription drugs arise from an accident which is the subject matter of a personal injury legal claim and agrees to pay BVRX in the full lien amount representing the Billed Amount at the time that Patient’s Legal Claim is resolved. Patient further agrees that Patient’s obligation to pay BVRX is absolute and that it is Patient’s responsibility to pay the Billed Amount regardless of the outcome of the Legal Claim. Patient agrees only to use the card for legally prescribed prescription drugs related to their legal claim. Any prescriptions filled for drugs unrelated to the underlying legal claim are unauthorized. Patient agrees to reimburse BVRX's Billed Amount for unauthorized charges immediately upon demand, and if unpaid by the time the underlying case is resolved, BVRX's lien on the proceeds of the underlying legal claim will include these unauthorized charges.
+                    <br />
+                    <br />
+                    Patient, by and through this Medical Lien Acknowledgement, hereby irrevocably instructs Patient’s attorney or any subsequent attorney(s), or tortfeasor’s insurance carriers related to the Legal Claim, that upon any settlement, verdict or other adjudication of the Legal Claim which results in Patient being entitled to monetary proceeds, that they shall each protect and satisfy BVRX's lien in the amount of the lien before releasing any funds to Patient. Patient acknowledges and agrees that should there be a dispute in the amount owed to BVRX, Patient’s attorney or tortfeasor’s insurance carrier is required to hold funds in trust until the dispute is resolved as evidenced by written instructions from BVRX to release any remaining funds. Patient agrees to instruct all necessary parties to the Legal Claim that if Patient’s attorney-client relationship is severed, Patient’s discharged attorney and Patient’s new attorney must provide BVRX with applicable tortfeasors’ insurance and/or updated attorney information in order for BVRX to protect its medical lien as granted by Patient herein. Patient agrees that if a payment is issued to Patient related to the Legal Claim, the attorney representing Patient will be directed to deposit the check into the attorney’s trust account and pay BVRX's lien in full before releasing any funds to Patient.
+                    <br />
+                    <br />
+                </span>
+                <h6 style="color:slateblue;">Signature ofPatient or Laaw Firm<strong style="color:red">*</strong></h6>
+                <div id="signature-pad" class="signature-pad">
+                    <div class="signature-pad--body">
+                        <canvas></canvas>
+                    </div>
+                    <div class="signature-pad--footer">
+                        <div class="description">Sign above</div>
+
+                        <div class="signature-pad--actions">
+                            <div>
+                                <button type="button" class="btn" data-action="clear">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h6 style="color:slateblue;">Name of Signer<strong style="color:red">*</strong></h6>
+                    <input class="form-control" style="text-align:center;" type="text" placeholder="First Name" id="txtSignerFirstName" />
+                    <br />
+                    <input class="form-control" style="text-align:center;" type="text" placeholder="Last Name" id="txtSignerLastName" />
+                    <br />
+                    <br />
+                    <input class="btn btn-danger" type="button" asp-page="Index" asp-page-handler="OnClick" id="btnSearch" value="Submit" /><br />
+
+                </div>
+            </div>
+                     
+        
+        
+        
+        
+    </div>
+
+</form>
+@section Scripts {
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+}
